@@ -1,26 +1,17 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package nonentitysuperclass;
-
+/* Subclass: inheritance with Employee */
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- *
- * @author sarun
- */
-@Entity
+@Entity /* Save ลงตาราง */
 public class ParttimeEmployee extends Employee implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private int hoursWork;
 
     public int getHoursWork() {
@@ -48,7 +39,6 @@ public class ParttimeEmployee extends Employee implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof ParttimeEmployee)) {
             return false;
         }
@@ -63,5 +53,4 @@ public class ParttimeEmployee extends Employee implements Serializable {
     public String toString() {
         return "nonentitysuperclass.ParttimeEmployee[ id=" + id + " ]";
     }
-    
 }

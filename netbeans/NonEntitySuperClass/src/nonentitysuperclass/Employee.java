@@ -1,17 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package nonentitysuperclass;
-
-/**
- *
- * @author sarun
- */
+/* Non-Entity Superclass */
 public class Employee {
-
+    /* class ธรรมดา: อาจมีการใช้งานในช่วงRun time
+     * attibute จะไม่ถูกเขียนลงในDatabase */
     protected String temp;
-
     public String getTemp() {
         return temp;
     }
@@ -19,5 +11,4 @@ public class Employee {
     public void setTemp(String temp) {
         this.temp = temp;
     }
-
 }
